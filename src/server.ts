@@ -1,7 +1,8 @@
-import "dotenv/config";
-
 import { app } from "./app";
+import { env } from "./env";
+import { connection } from "./lib/mongoose";
 
-app.listen(process.env.PORT, () => {
+app.listen(env.PORT, async () => {
   console.log("🚀 HTTP Server Running!");
+  await connection();
 });
