@@ -1,1 +1,1 @@
-export class AuthenticateUseCase {}
+export class HealthCheckUseCase {}
